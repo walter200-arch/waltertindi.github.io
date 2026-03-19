@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <meta name="google-site-verification" content="NSaoYWMnpBkLp5nyU_xJBBLN4vethjRTX9WH59lHzpI" />
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="NSaoYWMnpBkLp5nyU_xJBBLN4vethjRTX9WH59lHzpI" />
   <title>Walter Tindi | Cybersecurity Analyst</title>
   <style>
     :root{
@@ -12,30 +13,31 @@
     [data-theme="light"]{
       --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#16a34a;
     }
-    *{box-sizing:border-box}
-  
+    *{box-sizing:border-box;}
     body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1000px;margin:auto;padding:20px}
-    header{padding:80px 20px;text-align:center;position:relative;overflow:hidden}
-    .glow{position:absolute;inset:-50%;background:radial-gradient(circle at 50% 50%, rgba(34,197,94,.2), transparent 40%);filter:blur(60px);animation:pulse 6s infinite}
+    a{color:inherit;text-decoration:none;}
+    .container{max-width:1000px;margin:auto;padding:20px;}
+    header{padding:80px 20px;text-align:center;position:relative;overflow:hidden;}
+    .glow{position:absolute;inset:-50%;background:radial-gradient(circle at 50% 50%, rgba(34,197,94,.2), transparent 40%);filter:blur(60px);animation:pulse 6s infinite;}
     @keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}
-    h1{font-size:44px;margin:0}
-    .tag{color:var(--accent);margin-top:10px}
-    nav{display:flex;justify-content:center;gap:18px;padding:12px;border-top:1px solid rgba(148,163,184,.15);border-bottom:1px solid rgba(148,163,184,.15);backdrop-filter:blur(8px)}
-    nav a{font-weight:600;opacity:.9}
-    .btn{border:1px solid rgba(148,163,184,.25);padding:8px 12px;border-radius:10px}
-    .grid{display:grid;gap:16px}
-    .grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    section{padding:40px 0}
-    h2{color:var(--accent);margin-bottom:10px}
-    .card{background:var(--card);padding:18px;border-radius:16px;border:1px solid rgba(148,163,184,.15);box-shadow:0 10px 30px rgba(2,6,23,.25);transition:transform .2s, box-shadow .2s}
-    .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(2,6,23,.35)}
-    .muted{color:var(--muted)}
-    .badge{display:inline-block;padding:4px 8px;border-radius:999px;background:rgba(34,197,94,.15);color:var(--accent);font-size:12px;margin-right:6px}
-    footer{text-align:center;padding:30px 0;border-top:1px solid rgba(148,163,184,.15)}
-    .topbar{position:fixed;right:16px;top:16px;display:flex;gap:8px}
-    .link{color:var(--accent);font-weight:600}
+    h1{font-size:44px;margin:0;}
+    .tag{color:var(--accent);margin-top:10px;}
+    nav{display:flex;justify-content:center;gap:18px;padding:12px;border-top:1px solid rgba(148,163,184,.15);border-bottom:1px solid rgba(148,163,184,.15);backdrop-filter:blur(8px);}
+    nav a{font-weight:600;opacity:.9;}
+    .btn{border:1px solid rgba(148,163,184,.25);padding:8px 12px;border-radius:10px;cursor:pointer;}
+    .grid{display:grid;gap:16px;}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+    section{padding:40px 0;}
+    h2{color:var(--accent);margin-bottom:10px;}
+    .card{background:var(--card);padding:18px;border-radius:16px;border:1px solid rgba(148,163,184,.15);box-shadow:0 10px 30px rgba(2,6,23,.25);transition:transform .2s, box-shadow .2s;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(2,6,23,.35);}
+    .muted{color:var(--muted);}
+    .badge{display:inline-block;padding:4px 8px;border-radius:999px;background:rgba(34,197,94,.15);color:var(--accent);font-size:12px;margin-right:6px;}
+    footer{text-align:center;padding:30px 0;border-top:1px solid rgba(148,163,184,.15);}
+    .topbar{position:fixed;right:16px;top:16px;display:flex;gap:8px;}
+    .link{color:var(--accent);font-weight:600;}
+    .skills-buttons{margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;}
+    .skills-display{margin-top:10px;}
   </style>
 </head>
 <body>
@@ -71,28 +73,15 @@
 
     <section id="skills">
       <h2>Skills</h2>
-      <div class="card">
-        <span class="badge">Web Security</span>
-        <span class="badge">Penetration Testing</span>
-        <span class="badge">PHP & MySQL</span>
-        <span class="badge">JavaScript</span>
-        <span class="badge">Linux</span>
-        <span class="badge">Digital Forensics</span>
-        <span class="badge">Network Analysis</span>
+      <div class="skills-buttons">
+        <button class="btn" onclick="showSkills('web')">Web Security</button>
+        <button class="btn" onclick="showSkills('pentest')">Penetration Testing</button>
+        <button class="btn" onclick="showSkills('forensics')">Digital Forensics</button>
+        <button class="btn" onclick="showSkills('dev')">PHP & MySQL / JS</button>
+        <button class="btn" onclick="showSkills('network')">Network & Linux</button>
       </div>
-    </section>
-
-    <section id="forensics">
-      <h2>Digital Forensics</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Forensics Tools</h3>
-          <p class="muted">Experience with tools like Autopsy, Wireshark, and FTK for analyzing digital evidence.</p>
-        </div>
-        <div class="card">
-          <h3>Capabilities</h3>
-          <p class="muted">Data recovery, log analysis, network traffic inspection, and incident investigation.</p>
-        </div>
+      <div class="skills-display card" id="skills-display">
+        <!-- Skills will appear here when button is clicked -->
       </div>
     </section>
 
@@ -127,10 +116,14 @@
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2>Hire Me</h2>
       <div class="card">
         <p>Email: tindiwalter20@yahoo.com</p>
         <p>Phone: 0769537916</p>
+        <p>
+          <a class="link" href="YOUR_LINKEDIN_URL" target="_blank">LinkedIn</a> | 
+          <a class="link" href="YOUR_INSTAGRAM_URL" target="_blank">Instagram</a>
+        </p>
       </div>
     </section>
   </main>
@@ -141,8 +134,31 @@
 
   <script>
     function toggleTheme(){
-      const current=document.documentElement.getAttribute('data-theme');
+      const current = document.documentElement.getAttribute('data-theme');
       document.documentElement.setAttribute('data-theme', current==='light'?'dark':'light');
+    }
+
+    function showSkills(category){
+      const display = document.getElementById('skills-display');
+      let html = '';
+      switch(category){
+        case 'web':
+          html = '<span class="badge">Web Security</span> <span class="badge">Secure Coding</span> <span class="badge">OWASP Top 10</span>';
+          break;
+        case 'pentest':
+          html = '<span class="badge">Penetration Testing</span> <span class="badge">Vulnerability Assessment</span> <span class="badge">Metasploit</span>';
+          break;
+        case 'forensics':
+          html = '<span class="badge">Digital Forensics</span> <span class="badge">Autopsy</span> <span class="badge">FTK</span> <span class="badge">Wireshark</span>';
+          break;
+        case 'dev':
+          html = '<span class="badge">PHP & MySQL</span> <span class="badge">JavaScript</span> <span class="badge">HTML/CSS</span>';
+          break;
+        case 'network':
+          html = '<span class="badge">Linux</span> <span class="badge">Network Analysis</span> <span class="badge">Wireshark</span>';
+          break;
+      }
+      display.innerHTML = html;
     }
   </script>
 </body>
