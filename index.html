@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walter Tindi | Cybersecurity Analyst</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#94a3b8; --accent:#22c55e;
+    }
+    [data-theme="light"]{
+      --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#16a34a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1000px;margin:auto;padding:20px}
+    header{padding:80px 20px;text-align:center;position:relative;overflow:hidden}
+    .glow{position:absolute;inset:-50%;background:radial-gradient(circle at 50% 50%, rgba(34,197,94,.2), transparent 40%);filter:blur(60px);animation:pulse 6s infinite}
+    @keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}
+    h1{font-size:44px;margin:0}
+    .tag{color:var(--accent);margin-top:10px}
+    nav{display:flex;justify-content:center;gap:18px;padding:12px;border-top:1px solid rgba(148,163,184,.15);border-bottom:1px solid rgba(148,163,184,.15);backdrop-filter:blur(8px)}
+    nav a{font-weight:600;opacity:.9}
+    .btn{border:1px solid rgba(148,163,184,.25);padding:8px 12px;border-radius:10px}
+    .grid{display:grid;gap:16px}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    section{padding:40px 0}
+    h2{color:var(--accent);margin-bottom:10px}
+    .card{background:var(--card);padding:18px;border-radius:16px;border:1px solid rgba(148,163,184,.15);box-shadow:0 10px 30px rgba(2,6,23,.25);transition:transform .2s, box-shadow .2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(2,6,23,.35)}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;padding:4px 8px;border-radius:999px;background:rgba(34,197,94,.15);color:var(--accent);font-size:12px;margin-right:6px}
+    footer{text-align:center;padding:30px 0;border-top:1px solid rgba(148,163,184,.15)}
+    .topbar{position:fixed;right:16px;top:16px;display:flex;gap:8px}
+    .link{color:var(--accent);font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <button class="btn" onclick="toggleTheme()">Toggle Theme</button>
+    <a class="btn" href="#contact">Hire Me</a>
+  </div>
+
+  <header>
+    <div class="glow"></div>
+    <h1>Walter Tindi</h1>
+    <p class="tag">Cybersecurity Analyst • Certified Ethical Hacker (CEH)</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          Hi, I’m Walter Tindi, a Certified Ethical Hacker (CEH) and Cybersecurity and Digital Forensics graduate from Kabarak University.
+          I focus on web application security, vulnerability assessment, and building resilient systems.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <span class="badge">Web Security</span>
+        <span class="badge">Penetration Testing</span>
+        <span class="badge">PHP & MySQL</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Linux</span>
+        <span class="badge">Digital Forensics</span>
+        <span class="badge">Network Analysis</span>
+      </div>
+    </section>
+
+    <section id="forensics">
+      <h2>Digital Forensics</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Forensics Tools</h3>
+          <p class="muted">Experience with tools like Autopsy, Wireshark, and FTK for analyzing digital evidence.</p>
+        </div>
+        <div class="card">
+          <h3>Capabilities</h3>
+          <p class="muted">Data recovery, log analysis, network traffic inspection, and incident investigation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>SecureAuth Lab</h3>
+          <p class="muted">Vulnerable web app for security testing and training.</p>
+          <a class="link" href="#">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Freelancer Portal</h3>
+          <p class="muted">PHP & MySQL platform with proposals, chat, and dashboards.</p>
+          <a class="link" href="#">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Top 5 Web Vulnerabilities</h3>
+          <p class="muted">A quick guide to common security flaws and how to prevent them.</p>
+        </div>
+        <div class="card">
+          <h3>Building a Vulnerable App</h3>
+          <p class="muted">How I created SecureAuth Lab for testing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: tindiwalter20@yahoo.com</p>
+        <p>Phone: 0769537916</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Walter Tindi</p>
+  </footer>
+
+  <script>
+    function toggleTheme(){
+      const current=document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', current==='light'?'dark':'light');
+    }
+  </script>
+</body>
+</html>
